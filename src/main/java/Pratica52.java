@@ -31,7 +31,7 @@ public class Pratica52 {
         System.out.println("Raiz 1 equação 3 = " + raiz3a);
         System.out.println("Raiz 2 equação 3 = " + raiz3b);
         
-        } catch(java.lang.RuntimeException invalida) {
+        } catch(RuntimeException invalida) {
             System.out.println(invalida.getLocalizedMessage());
         }
         

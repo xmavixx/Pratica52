@@ -10,15 +10,15 @@ package utfpr.ct.dainf.if62c.pratica;
  *
  * @author askoda
  */
-public class Equacao2Grau {
-    private Number a;
-    private Number b;
-    private Number c;
+public class Equacao2Grau <T extends Number> {
+    private T a;
+    private T b;
+    private T c;
     
-    public Equacao2Grau(Number a, Number b, Number c) {
+    public Equacao2Grau(T a, T b, T c) {
 
-        if(a.equals(0))
-            throw new java.lang.RuntimeException("Coeficiente a não pode ser zero");
+        if(a.doubleValue() == 0.0)
+            throw new RuntimeException("Coeficiente a não pode ser zero");
 
         this.a = a;
         this.b = b;
@@ -26,31 +26,31 @@ public class Equacao2Grau {
         
     }
     
-    public Number getA() {
+    public T getA() {
         return this.a;
     }
     
-    public Number getB() {
+    public T getB() {
         return this.b;
     }
     
-    public Number getC() {
+    public T getC() {
         return this.c;
     }
     
-    public void setA(Number a) {
+    public void setA(T a) {
         
-        if(a.equals(0))
-            throw new java.lang.RuntimeException("Coeficiente a não pode ser zero");
+        if(a.doubleValue() == 0.0)
+            throw new RuntimeException("Coeficiente a não pode ser zero");
         
         this.a = a;
     }
     
-    public void setB(Number b) {
+    public void setB(T b) {
         this.b = b;
     }
     
-    public void setC(Number c) {
+    public void setC(T c) {
         this.c = c;
     }
     
@@ -58,9 +58,9 @@ public class Equacao2Grau {
         double raiz;
         
         if(Math.pow(b.doubleValue(), 2) - 4*a.doubleValue()*c.doubleValue() < 0)
-            throw new java.lang.RuntimeException("Equação não tem solução real");
+            throw new RuntimeException("Equação não tem solução real");
         
-        raiz = (-b.doubleValue() + Math.sqrt(Math.pow(b.doubleValue(), 2) - 
+        raiz = (-1*b.doubleValue() + Math.sqrt(Math.pow(b.doubleValue(), 2) - 
                 4*a.doubleValue()*c.doubleValue()))/(2*a.doubleValue());
         
         return raiz;
@@ -70,9 +70,9 @@ public class Equacao2Grau {
         double raiz;
         
         if(Math.pow(b.doubleValue(), 2) - 4*a.doubleValue()*c.doubleValue() < 0)
-            throw new java.lang.RuntimeException("Equação não tem solução real");
+            throw new RuntimeException("Equação não tem solução real");
         
-        raiz = (-b.doubleValue() - Math.sqrt(Math.pow(b.doubleValue(), 2) - 
+        raiz = (-1*b.doubleValue() - Math.sqrt(Math.pow(b.doubleValue(), 2) - 
                 4*a.doubleValue()*c.doubleValue()))/(2*a.doubleValue());
         
         return raiz;
