@@ -1,4 +1,7 @@
 
+import utfpr.ct.dainf.if62c.pratica.Equacao2Grau;
+
+
 public class Pratica52 {
     public static void main(String[] args) {
         
