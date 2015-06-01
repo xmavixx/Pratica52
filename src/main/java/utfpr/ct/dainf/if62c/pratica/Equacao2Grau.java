@@ -8,7 +8,7 @@ package utfpr.ct.dainf.if62c.pratica;
 
 /**
  *
- * @author askoda
+ * @author vitholken
  */
 public class Equacao2Grau <T extends Number> {
     private T a;
